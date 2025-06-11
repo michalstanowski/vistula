@@ -1,3 +1,8 @@
+<p align="center">
+    <img src="images/logo.png" alt="" width="50%"/>
+</p>
+
+
 # 🧬 VistulaSwitch
 
 **VistulaSwitch** is a command-line tool for designing RNA toehold switches with thermodynamic evaluation, intended for applications in synthetic biology, diagnostics, and gene regulation.
