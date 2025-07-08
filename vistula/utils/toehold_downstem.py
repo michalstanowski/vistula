@@ -271,5 +271,5 @@ for i in range(len(kmer_lengths)):
                     best_complex = complex_to_check
 
 print(f"Best complex: {best_complex}")
-print(f"Best toehold (with linker): {best_complex.split("&")[1]}")
+print(f"Best toehold (with linker): {best_complex.split('&')[1]}")
 shutil.rmtree(tmp_dir)
