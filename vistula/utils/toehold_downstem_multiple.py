@@ -299,6 +299,25 @@ def evaluate_toehold(tseq, variants, comp_to_kmer, th_1, tmp_dir):
 
 
 def find_best_complex(transcript_seq, reporter_seq, tmp_dir):
+    """
+    Identifies the best-performing toehold switch design for a given transcript sequence.
+
+    For each k-mer in the transcript, the function:
+        - Designs a candidate toehold using forward-engineering rules,
+        - Optimizes its variable regions using RNAinverse,
+        - Evaluates binding affinity using RNAup and RNAcofold,
+        - Keeps the best-scoring switch based on the combined score.
+
+    Parameters:
+        transcript_seq (str): Target transcript sequence (RNA).
+        reporter_seq (str): Reporter gene sequence (RNA).
+        tmp_dir (str): Path to a temporary directory for storing intermediate RNA evaluation files.
+
+    Returns:
+        tuple:
+            - best_complex (str): The best toehold switch sequence (with linker and optimized variable regions).
+            - aug_pos (int): The position (0-based index) of the explicitly placed AUG start codon within the sequence.
+    """
     best_score = 0
     best_complex = ""
 
